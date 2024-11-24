@@ -1,0 +1,49 @@
+<!-- hello! -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/icon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- this is a font that supports runes, however i ended up wanting to use a monospaced font instead -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Runic&display=swap" rel="stylesheet">
+
+    <title>runes translator</title>
+</head>
+<body>
+
+<!-- open/close button for the modal (popup) -->
+<a id="modalButton">about</a>
+<div id="modal">
+    <div id="modalContent">
+        this is a "translator" for the runic script of my fictional world.<br><br>it uses runes from <a href="https://en.wikipedia.org/wiki/Rune#Elder_Futhark_(2nd_to_8th_centuries)">elder futhark</a>.<br><br> the world's capital cities: ᛁᚨᚱoᚲ, ᛖᛚᛚoᚾᚺᚨ, ᚲᛖᛊᛏoᛚ, ᚨᛁᚦᛖᚾ, & ᚱᚺᚨᛁᛞᛖᚦ.
+    </div>
+</div>
+
+<!-- input and output sections -->
+<div id="main">
+    <textarea rows="3" id="userInput" placeholder="input"   oninput="translateText()"></textarea>
+    <br>
+    <textarea rows="3" id="output" placeholder="output" readonly="true"></textarea>
+</div>
+
+<div class="finePrint">
+    font: free mono
+    <br>
+    <a href="https://www.gnu.org/software/freefont/license.html">licence</a>
+    <a href="https://www.gnu.org/software/freefont/index.html">website</a>
+</div>
+
+<!-- the script that handles the text conversion -->
+<script src="translate.js"></script>
+<!-- the script that handles the modal (popup) -->
+<script src="modal.js"></script>
+
+</body>
+</html>
